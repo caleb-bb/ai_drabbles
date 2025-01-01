@@ -58,7 +58,12 @@ defmodule AiDrabbles.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.5"},
-      {:langchain, "0.2.0"}
+      {:langchain, "0.2.0"},
+      {:ex_doc, "~> 0.34", only: :dev, runtime: false},
+      {:bumblebee, "~> 0.6.0"},
+      # For accelerated computations
+      {:exla, "~> 0.9"},
+      {:nx, "~> 0.9.0"}
     ]
   end
 
