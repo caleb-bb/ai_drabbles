@@ -9,7 +9,7 @@ import Config
 
 config :ai_drabbles,
   ecto_repos: [AiDrabbles.Repo],
-  generators: [timestamp_type: :utc_datetime]
+  generators: [timestamp_type: :utc_datetime
 
 # Configures the endpoint
 config :ai_drabbles, AiDrabblesWeb.Endpoint,
@@ -62,6 +62,8 @@ config :logger, :console,
 config :phoenix, :json_library, Jason
 
 config :nx, :default_backend, EXLA.Backend
+
+config :langchain, openai_key: System.get_env("OPENAI_KEY")
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
