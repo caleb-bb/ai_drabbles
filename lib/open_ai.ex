@@ -26,12 +26,6 @@ defmodule AiDrabbles.OpenAI do
     end
   end
 
-  # TODO we need a module to spin up a genserver and hold the current chain as state
-  # Maybe that should be separate from the API module? I think so
-  # In that case, the API module (which is our boundary layer)
-  # Should call the genserver module, which is pure
-  # The boundary layer can just implement genserver unless the
-  # genservers need some unique/fancy functionality
   def reply_to_chain(chain, message, opts \\ %{}) do
     chain
     |> Map.merge(opts)

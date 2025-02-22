@@ -9,7 +9,7 @@ import Config
 
 config :ai_drabbles,
   ecto_repos: [AiDrabbles.Repo],
-  generators: [timestamp_type: :utc_datetime
+  generators: [timestamp_type: :utc_datetime]
 
 # Configures the endpoint
 config :ai_drabbles, AiDrabblesWeb.Endpoint,
